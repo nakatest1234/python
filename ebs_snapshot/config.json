@@ -1,0 +1,9 @@
+{
+	"tag": "AUTOBKUP",
+	"slack": {
+		"url"     : "https://hooks.slack.com/services/XXXXXXXX/YYYYYYYY/abcdefg1234567890",
+		"channel" : "@hogehoge",
+		"msg"     : "",
+		"opt"     : {"username":"lambda", "icon_emoji":":moneybag:"}
+	}
+}
