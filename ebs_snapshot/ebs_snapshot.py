@@ -115,18 +115,11 @@ def snapshot(tag):
 def post_slack(data, msg):
 	from mylib.slack import slack
 	if (isinstance(data, types.DictType) and data.has_key('url') and data.has_key('channel')):
-		slack(data['url'], data['channel'], msg, data['opt']);
+		slack(data['url'], data['channel'], msg, data['opt'])
 
 
 def lambda_handler(event, context):
-	try:
-		main()
-	except NameError, e:
-		print >> sys.stderr, "NameError:", e.args[0]
-	except Exception, e:
-		print >> sys.stderr, "Exception:", e.args[0], e.args[1]
-	except:
-		print >> sys.stderr, "Unexpected error:", sys.exc_info()[0]
+	main()
 
 
 def main():
