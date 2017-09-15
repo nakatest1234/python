@@ -36,6 +36,8 @@ def main(event, context):
 
 			print('{}/{} -> {}/{}'.format(bucket,key, target_bucket,target_path))
 			s3.Object(target_bucket, target_path).copy_from(CopySource={'Bucket':bucket,'Key':key})
+			# 下記は削除の場合
+			# s3.Object(target_bucket, target_path).delete()
 
 	except Exception as e:
 		print(e)
